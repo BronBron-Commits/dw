@@ -1,0 +1,13 @@
+[package]
+name = "rwx_viewer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+glfw = "0.55.0"
+gl = "0.14.0"
+rwx_lexer = { path = "../rwx_lexer" }
+rwx_parser = { path = "../rwx_parser" }
+rwx_semantics = { path = "../rwx_semantics" }
+rwx_normalizer = { path = "../rwx_normalizer" }
+

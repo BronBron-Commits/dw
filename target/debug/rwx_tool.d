@@ -1,1 +1,1 @@
-C:\DW_NEW\dw\target\debug\rwx_tool.exe: C:\DW_NEW\dw\rwx_parser\src\ast.rs C:\DW_NEW\dw\rwx_parser\src\lexer.rs C:\DW_NEW\dw\rwx_parser\src\lib.rs C:\DW_NEW\dw\rwx_parser\src\normalizer.rs C:\DW_NEW\dw\rwx_parser\src\parser.rs C:\DW_NEW\dw\rwx_tool\src\main.rs
+/home/unhidra/dw/target/debug/rwx_tool: /home/unhidra/dw/rwx_lexer/src/lib.rs /home/unhidra/dw/rwx_parser/src/lib.rs /home/unhidra/dw/rwx_tool/src/export_obj.rs /home/unhidra/dw/rwx_tool/src/lib.rs /home/unhidra/dw/rwx_tool/src/main.rs

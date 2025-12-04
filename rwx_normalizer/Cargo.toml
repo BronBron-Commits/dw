@@ -1,0 +1,9 @@
+[package]
+name = "rwx_normalizer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rwx_parser = { path = "../rwx_parser" }
+rwx_semantics = { path = "../rwx_semantics" }
+hashbrown = "0.14"

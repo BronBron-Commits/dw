@@ -1,0 +1,1 @@
+/home/unhidra/dw/target/debug/librwx_tool.rlib: /home/unhidra/dw/rwx_lexer/src/lib.rs /home/unhidra/dw/rwx_parser/src/lib.rs /home/unhidra/dw/rwx_tool/src/export_obj.rs /home/unhidra/dw/rwx_tool/src/lib.rs

@@ -1,9 +1,5 @@
-// rwx_parser/src/ast.rs
-
-use serde::{Serialize, Deserialize};
-
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub struct RwxVertex {
+#[derive(Debug, Clone)]
+pub struct Vertex {
     pub x: f32,
     pub y: f32,
     pub z: f32,
@@ -11,33 +7,27 @@ pub struct RwxVertex {
     pub v: f32,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub struct RwxFace {
-    pub indices: Vec<usize>,      // vertex indices (1-based in RWX, 0-based here)
-    pub texture: Option<String>,
+#[derive(Debug, Clone)]
+pub enum Face {
+    Quad(Vec<u32>, String),
+    Poly(Vec<u32>, String),
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub struct RwxMesh {
-    pub vertices: Vec<RwxVertex>,
-    pub faces: Vec<RwxFace>,
-}
-
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub struct RwxPrototype { // Maps to ProtoBegin/ProtoEnd
+#[derive(Debug, Clone)]
+pub struct MaterialRef {
     pub name: String,
-    pub mesh: RwxMesh, // Simplified for this example
-    // Add Transform, Surface, etc. fields here later
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub struct RwxClump { // Maps to ClumpBegin/ClumpEnd
-    pub children: Vec<RwxObject>,
+#[derive(Debug, Clone)]
+pub enum Node {
+    Vertex(Vertex),
+    Face(Face),
+    Material(MaterialRef),
+    Transform(Vec<f32>),
+    Block(Vec<Node>),
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-pub enum RwxObject {
-    Prototype(RwxPrototype),
-    Clump(RwxClump),
-    // Other top-level RWX objects (e.g., ModelBegin)
+#[derive(Debug, Clone)]
+pub struct RwxModel {
+    pub nodes: Vec<Node>,
 }

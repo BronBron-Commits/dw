@@ -1,14 +1,11 @@
-# rwx_parser/Cargo.toml
-
 [package]
 name = "rwx_parser"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Added for reliable f32 comparison for unique material checks
-float-cmp = "0.9"
+rwx_lexer = { path = "../rwx_lexer" }
 
-# REQUIRED FOR YOUR RWX OBJECT STRUCT DEFINITIONS (ast.rs)
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+[lib]
+name = "rwx_parser"
+path = "src/lib.rs"

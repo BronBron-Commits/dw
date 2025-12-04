@@ -1,0 +1,215 @@
+newmtl default
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl NULL
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2h
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2h
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2h
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1i
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1f
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1b
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch1c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2h
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2e2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2i2
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2a
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+
+newmtl couch2c
+Kd 0.8 0.8 0.8
+Ks 0.0 0.0 0.0
+d 1.0
+

@@ -1,44 +1,41 @@
-// rwx_tool/src/main.rs
-
-// FIX A: Correctly import the Clump variant from the RwxObject enum.
-use rwx_parser::ast::{RwxObject, RwxMesh, RwxPrototype}; 
-use rwx_parser::parse_rwx_to_object; // Import the renamed function
-
-use std::fs;
 use std::env;
-use std::process;
+use std::fs;
+
+use rwx_lexer::lex;
+use rwx_parser::parse;
+
+// import the function from the module
+use crate::export_obj::export_obj;
+
+mod export_obj;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    if args.len() < 2 {
-        eprintln!("Usage: {} <rwx_file_path>", args[0]);
-        process::exit(1);
+    if args.len() < 3 {
+        eprintln!("Usage: rwx_tool <input.rwx> <output_base> [--debug]");
+        std::process::exit(1);
     }
 
-    let file_path = &args[1];
+    let input = &args[1];
+    let output = &args[2];
+    let debug = args.iter().any(|a| a == "--debug");
 
-    // Read the file content
-    let content = match fs::read_to_string(file_path) {
-        Ok(c) => c,
-        Err(e) => {
-            eprintln!("Error reading file {}: {}", file_path, e);
-            process::exit(1);
-        }
-    };
+    let text = fs::read_to_string(input)
+        .expect("Failed to read RWX file");
 
-    // FIX B: Call the function with the new, correct name.
-    let rwx_objects = match parse_rwx_to_object(&content) {
-        Ok(objects) => objects,
-        Err(e) => {
-            eprintln!("Parsing Error: {}", e);
-            process::exit(1);
-        }
-    };
+    let tokens = lex(&text);
+    let model = parse(&tokens);
 
-    // Output the resulting structure (using serde_json for easy viewing)
-    match serde_json::to_string_pretty(&rwx_objects) {
-        Ok(json) => println!("{}", json),
-        Err(e) => eprintln!("Error serializing output: {}", e),
+    if debug {
+        println!("{:#?}", model);
     }
+
+    // this now works
+    if let Err(e) = export_obj(&model, output) {
+        eprintln!("Error exporting OBJ: {}", e);
+        std::process::exit(1);
+    }
+
+    println!("Exported OBJ + MTL to {output}.obj and {output}.mtl");
 }

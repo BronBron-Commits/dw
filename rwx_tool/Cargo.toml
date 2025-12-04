@@ -1,10 +1,16 @@
-# rwx_tool/Cargo.toml
-
 [package]
 name = "rwx_tool"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+rwx_lexer = { path = "../rwx_lexer" }
 rwx_parser = { path = "../rwx_parser" }
-serde_json = "1.0" # <--- ADD THIS LINE
+
+[lib]
+name = "rwx_tool"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rwx_tool"
+path = "src/main.rs"

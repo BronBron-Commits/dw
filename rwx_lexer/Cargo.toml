@@ -1,0 +1,9 @@
+[package]
+name = "rwx_lexer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rwx_lexer"
+path = "src/lib.rs"
+
