@@ -22,22 +22,20 @@ pub struct RwxMesh {
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct RwxMaterial {
-    pub surface: Option<String>,
-    pub opacity: Option<f32>,
-    pub diffuse: Option<[f32;3]>,
-    pub ambient: Option<[f32;3]>,
-    pub specular: Option<[f32;3]>,
-    pub emissive: Option<[f32;3]>,
-    pub shininess: Option<f32>,
     pub texture: Option<String>,
-    pub texture_mode: Option<String>,
+    pub opacity: Option<f32>,
+    pub ambient: Option<[f32; 3]>,
+    pub diffuse: Option<[f32; 3]>,
+    pub specular: Option<[f32; 3]>,
+    pub emissive: Option<[f32; 3]>,
+    pub shininess: Option<f32>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct RwxTransform {
-    pub translate: Option<[f32;3]>,
-    pub rotate: Option<[f32;4]>,
-    pub scale: Option<[f32;3]>,
+    pub translate: Option<[f32; 3]>,
+    pub rotate: Option<[f32; 4]>,   // angle + axis
+    pub scale: Option<[f32; 3]>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
