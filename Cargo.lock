@@ -48,6 +48,10 @@ dependencies = [
 [[package]]
 name = "rwx_scene"
 version = "0.1.0"
+dependencies = [
+ "rwx_parser",
+ "serde",
+]
 
 [[package]]
 name = "rwx_tool"
