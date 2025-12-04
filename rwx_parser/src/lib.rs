@@ -1,13 +1,7 @@
+pub mod lexer;
 pub mod ast;
+pub mod normalizer;
 pub mod parser;
 
-pub use ast::{
-    RwxObject,
-    RwxVertex,
-    RwxFace,
-    RwxMesh,
-    RwxMaterial,
-    RwxTransform,
-};
-
-pub use parser::{RwxParser, RwxError};
+pub use ast::{RwxVertex, RwxFace, RwxMesh, RwxObject};
+pub use parser::RwxParser;

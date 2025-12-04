@@ -1,8 +1,5 @@
 [workspace]
 members = [
     "rwx_parser",
-    "rwx_scene",
-    "rwx_export",
     "rwx_tool"
 ]
-resolver = "2"

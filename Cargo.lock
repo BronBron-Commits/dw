@@ -33,10 +33,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "rwx_export"
-version = "0.1.0"
-
-[[package]]
 name = "rwx_parser"
 version = "0.1.0"
 dependencies = [
@@ -46,16 +42,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "rwx_scene"
+name = "rwx_tool"
 version = "0.1.0"
 dependencies = [
  "rwx_parser",
  "serde",
 ]
-
-[[package]]
-name = "rwx_tool"
-version = "0.1.0"
 
 [[package]]
 name = "ryu"
