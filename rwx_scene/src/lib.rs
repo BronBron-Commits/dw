@@ -1,8 +1,5 @@
 use serde::{Serialize, Deserialize};
-use rwx_parser::{
-    RwxObject, RwxVertex, RwxFace, RwxMesh,
-    RwxTransform as ParserTransform
-};
+use rwx_parser::{RwxObject, RwxVertex, RwxFace, RwxMesh};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct RwxTransform {
@@ -17,14 +14,6 @@ impl RwxTransform {
             translate: None,
             rotate: None,
             scale: None,
-        }
-    }
-
-    pub fn from_parser(src: &ParserTransform) -> Self {
-        RwxTransform {
-            translate: src.translate,
-            rotate: src.rotate,
-            scale: src.scale,
         }
     }
 
@@ -103,8 +92,8 @@ pub struct RwxScene {
 }
 
 impl RwxScene {
-    pub fn from_object(obj: RwxObject) -> Self {
-        let root = Self::convert_node(&obj);
+    pub fn from_object(obj: &RwxObject) -> Self {
+        let root = Self::convert_node(obj);
         RwxScene { root }
     }
 
@@ -114,11 +103,6 @@ impl RwxScene {
             None => (vec![], vec![]),
         };
 
-        let transform = obj.transform
-            .as_ref()
-            .map(|t| RwxTransform::from_parser(t))
-            .unwrap_or_else(RwxTransform::identity);
-
         let children = obj.children.iter()
             .map(|c| Self::convert_node(c))
             .collect();
@@ -127,12 +111,12 @@ impl RwxScene {
             name: obj.name.clone(),
             vertices,
             faces,
-            transform,
+            transform: RwxTransform::identity(), // all nodes use identity
             children,
         }
     }
 
-    // Flatten scene into world-space mesh list
+    /// Flatten scene into world-space mesh list
     pub fn flatten(&self) -> Vec<RwxNode> {
         let mut out = vec![];
         Self::flatten_recursive(&self.root, &RwxTransform::identity(), &mut out);

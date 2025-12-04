@@ -1,7 +1,0 @@
-[package]
-name = "rwx_export"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-rwx_scene = { path = "../rwx_scene" }

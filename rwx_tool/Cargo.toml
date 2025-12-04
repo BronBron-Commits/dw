@@ -1,3 +1,5 @@
+# rwx_tool/Cargo.toml
+
 [package]
 name = "rwx_tool"
 version = "0.1.0"
@@ -5,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 rwx_parser = { path = "../rwx_parser" }
-serde = { version = "1.0", features = ["derive"] }
+# rwx_export dependency removed
